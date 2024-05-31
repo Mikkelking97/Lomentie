@@ -22,12 +22,6 @@ public GameObject test;
       test.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-      
-    }
-
   public void Butonpress()
   {
     /*if(image.enabled == false)
