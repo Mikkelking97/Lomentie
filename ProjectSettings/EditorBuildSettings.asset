@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Realms/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Realms/Tilemap.unity
+    guid: 9701dc41ad2286e4f8ba2a3df23f604f
   m_configObjects: {}
