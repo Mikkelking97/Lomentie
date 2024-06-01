@@ -7,7 +7,7 @@ using TMPro;
 
 public class Hero_Leveling : MonoBehaviour
 {
-    public TMP_Text displaycurrentXP;
+    public TMP_Text displaycurrentLVL;
 
     
     //Your current level.
@@ -20,11 +20,11 @@ public class Hero_Leveling : MonoBehaviour
    public int eXPThreshold = 10;
 
     //How much more xp you need for each levelup.    
-   public float eXPincreasemodifier = 1.5f;
+   public float eXPincreasemodifier = 1.1f;
 
    void Start()
    {
-        displaycurrentXP.SetText(level.ToString());
+        displaycurrentLVL.SetText(level.ToString());
    }
 
 //Button to click to gain XP
@@ -39,12 +39,18 @@ public void ClickToGainXP(int e)
 }
 
     private void LevelUp()
-    {
+    {   // resets the current xp for next lvl up.
         currentXP -= eXPThreshold;
         level ++;
+        
+        /* Test one.
         float t = Mathf.Pow(eXPincreasemodifier, level);
-        displaycurrentXP.SetText(level.ToString());
         eXPThreshold = (int)Mathf.Floor(eXPincreasemodifier * t);
+        */
+       
+       eXPThreshold = eXPThreshold + 10;
+
+        displaycurrentLVL.SetText(level.ToString());
     }
 
 }
