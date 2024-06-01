@@ -72,7 +72,7 @@ public class WaveFunction : MonoBehaviour
         Cell cellToCollapse = tempGrid[randIndex];
 
         cellToCollapse.collapsed = true;
-        Tile selectedTile = cellToCollapse.tileOptions[UnityEngine.Random.Range(0, cellToCollapse.tileOptions.Length)];
+        Tile selectedTile = cellToCollapse.tileOptions[UnityEngine.Random.Range(0, cellToCollapse.tileOptions.Length - 1)];
         cellToCollapse.tileOptions = new Tile[] { selectedTile };
 
         Tile foundTile = cellToCollapse.tileOptions[0];

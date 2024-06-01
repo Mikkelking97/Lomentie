@@ -168,11 +168,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dimensions: 20
   tileObjects:
-  - {fileID: 2922144599930610922, guid: c942557e11ea59c46b4509d3b281f233, type: 3}
-  - {fileID: -8566949571907126979, guid: 426a84d3f9565c84282c588eecf12b91, type: 3}
-  - {fileID: 2485335602644454067, guid: 8ddca93cc4d32314681c0fc618bc819b, type: 3}
-  - {fileID: -1461709181504594848, guid: 9056d4c244f5b6e448c6cea58c003b47, type: 3}
-  - {fileID: 2541277138989656035, guid: 474fe1863c1e6e849aeee3626b42a8f5, type: 3}
+  - {fileID: 7058601899977029329, guid: b8a0e3140214c2c428cda5b406486b65, type: 3}
+  - {fileID: 584646368430533959, guid: f547779742a22b74dbe6c63b45172a4b, type: 3}
+  - {fileID: 5738768018352261508, guid: 2c87fb20ddf26714c8edb85da3ca0be2, type: 3}
+  - {fileID: -742976803494528416, guid: 0071576975fe37348aa1a1e3c7d06f6b, type: 3}
+  - {fileID: -632677177900439296, guid: b5e7960067d4ad94fabbb913b48679f9, type: 3}
+  - {fileID: 6792762170822339698, guid: fb6312a3193dfe24da6d44810e021f62, type: 3}
+  - {fileID: 2643366282142871517, guid: 9fb96e4e594e5cb4c96bfea241384dfa, type: 3}
+  - {fileID: -1426451773055445260, guid: 1fb81433d295df34282f3b42918a1da6, type: 3}
+  - {fileID: 8903519407263812487, guid: 6954d00ac3b1b7f459565ee68045be40, type: 3}
+  - {fileID: -4267312887128344107, guid: 493d7f5736968cb4ca9dce068357df52, type: 3}
+  - {fileID: 2004678400640874252, guid: 419616f30f3295e4bada50acd39c9d76, type: 3}
   gridComponents: []
   cellObj: {fileID: 3176625814704739974, guid: df7441246455fa645ba241fbe0f53de0, type: 3}
 --- !u!1 &1157764902
@@ -262,7 +268,7 @@ Transform:
   m_GameObject: {fileID: 1157764902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 18, y: 9, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
