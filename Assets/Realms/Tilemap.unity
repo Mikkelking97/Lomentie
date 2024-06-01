@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dimensions: 20
+  seed: 311296
   tileObjects:
   - {fileID: 7058601899977029329, guid: b8a0e3140214c2c428cda5b406486b65, type: 3}
   - {fileID: 584646368430533959, guid: f547779742a22b74dbe6c63b45172a4b, type: 3}

@@ -8,6 +8,7 @@ using UnityEngine;
 public class WaveFunction : MonoBehaviour
 {
     public int dimensions;
+    public int seed = 1;
     public Tile[] tileObjects;
     public List<Cell> gridComponents;
     public Cell cellObj;
@@ -16,8 +17,15 @@ public class WaveFunction : MonoBehaviour
 
     void Awake()
     {
+        if (seed > 0)
+        {
         gridComponents = new List<Cell>();
         InitializeGrid();
+        }
+        else
+        {
+            Debug.Log("seed must be a positive number");
+        }
     }
 
     void InitializeGrid()
@@ -67,12 +75,35 @@ public class WaveFunction : MonoBehaviour
 
     void CollapseCell(List<Cell> tempGrid)
     {
-        int randIndex = UnityEngine.Random.Range(0, tempGrid.Count);
+        //int randIndex = UnityEngine.Random.Range(0, tempGrid.Count);
+        int gridElements = tempGrid.Count;
+        int randIndex = 0;
+        if (gridElements > seed)
+        {
+            randIndex = (gridElements % seed);
+        }
+        else
+        {
+            randIndex = (seed % gridElements);
+        }
 
         Cell cellToCollapse = tempGrid[randIndex];
 
         cellToCollapse.collapsed = true;
-        Tile selectedTile = cellToCollapse.tileOptions[UnityEngine.Random.Range(0, cellToCollapse.tileOptions.Length - 1)];
+        //Tile selectedTile = cellToCollapse.tileOptions[UnityEngine.Random.Range(0, cellToCollapse.tileOptions.Length - 1)];
+
+        int selIndex;
+        int cellLength = cellToCollapse.tileOptions.Length;
+        if (cellLength > seed)
+        {
+            selIndex = (cellLength % seed);
+        }
+        else
+        {
+            selIndex = (seed % cellLength);
+        }
+
+        Tile selectedTile = cellToCollapse.tileOptions[selIndex];
         cellToCollapse.tileOptions = new Tile[] { selectedTile };
 
         Tile foundTile = cellToCollapse.tileOptions[0];
