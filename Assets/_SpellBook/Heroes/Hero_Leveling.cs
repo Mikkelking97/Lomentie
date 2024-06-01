@@ -17,7 +17,7 @@ public class Hero_Leveling : MonoBehaviour
    public int currentXP = 0;
 
     //XP left until leveling up.
-   public int eXPleft = 10;
+   public int eXPThreshold = 10;
 
     //How much more xp you need for each levelup.    
    public float eXPincreasemodifier = 1.5f;
@@ -32,7 +32,7 @@ public void ClickToGainXP(int e)
 {
     currentXP += e;
 
-    if(currentXP >= eXPleft)
+    if(currentXP >= eXPThreshold)
     {
         LevelUp();
     }
@@ -40,11 +40,11 @@ public void ClickToGainXP(int e)
 
     private void LevelUp()
     {
-        currentXP -= eXPleft;
+        currentXP -= eXPThreshold;
         level ++;
         float t = Mathf.Pow(eXPincreasemodifier, level);
-        Debug.Log("Reads...");
         displaycurrentXP.SetText(level.ToString());
+        eXPThreshold = (int)Mathf.Floor(eXPincreasemodifier * t);
     }
 
 }
