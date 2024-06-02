@@ -9,6 +9,9 @@ public class Hero_Leveling : MonoBehaviour
 {
     #region 
     public TMP_Text displaycurrentLVL;
+    public TMP_Text displayattributeSTR;
+    public TMP_Text displayattributeVIT;
+    public TMP_Text upgradepoint;
 
 
     //Your current level.
@@ -23,6 +26,9 @@ public class Hero_Leveling : MonoBehaviour
     //How much more xp you need for each levelup.    
     public float eXPincreasemodifier = 1.1f;
     #endregion
+
+    public int skillpoint;
+    public int attributeStrength, attributeVitality;
     
     public Slider xpslider;
 
@@ -53,20 +59,37 @@ public class Hero_Leveling : MonoBehaviour
         currentXP -= eXPThreshold;
         level++;
 
-        /* Test one.
-        float t = Mathf.Pow(eXPincreasemodifier, level);
-        eXPThreshold = (int)Mathf.Floor(eXPincreasemodifier * t);
-        */
-
         eXPThreshold = eXPThreshold + 10;
 
         displaycurrentLVL.SetText(level.ToString());
+    }
+
+    public void SelectSTR()
+    {
+        if(skillpoint > 0)
+        {
+            attributeStrength++;
+        }
+    }
+
+    public void SelectVIT()
+    {
+        if(skillpoint > 0)
+        {
+            attributeVitality++;
+        }
     }
 
     public void Update()
     {
         xpslider.maxValue = eXPThreshold;
         xpslider.value = currentXP;
+
+        skillpoint = (level - attributeStrength - attributeVitality);
+        upgradepoint.SetText("Upgrade Points :" + skillpoint.ToString());
+        displayattributeSTR.SetText(attributeStrength.ToString());
+        displayattributeVIT.SetText(attributeVitality.ToString());
+
     }
 
 }
