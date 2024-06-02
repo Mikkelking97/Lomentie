@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,3 +123,6 @@ MonoBehaviour:
   - {fileID: -1426451773055445260, guid: 1fb81433d295df34282f3b42918a1da6, type: 3}
   - {fileID: 8903519407263812487, guid: 6954d00ac3b1b7f459565ee68045be40, type: 3}
   - {fileID: 2004678400640874252, guid: 419616f30f3295e4bada50acd39c9d76, type: 3}
+  - {fileID: -1743375669010815675, guid: d96d0923aeb42c84eb99a0f2c20e1998, type: 3}
+  - {fileID: -1881028265379381968, guid: e8eaa0f9c73e4694f8a52f653fe39c84, type: 3}
+  - {fileID: 4518432419756467324, guid: cee67af406467c24bad0bf233ba0f275, type: 3}
