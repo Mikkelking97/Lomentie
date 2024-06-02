@@ -30,6 +30,7 @@ public class Hero_Leveling : MonoBehaviour
     public int skillpoint;
     public int attributeStrength, attributeVitality;
     
+    //Slider/expbar to display the current xp.
     public Slider xpslider;
 
     void Awake()
@@ -63,7 +64,7 @@ public class Hero_Leveling : MonoBehaviour
 
         displaycurrentLVL.SetText(level.ToString());
     }
-
+    //Called when you press the strength attribute button.
     public void SelectSTR()
     {
         if(skillpoint > 0)
@@ -71,7 +72,7 @@ public class Hero_Leveling : MonoBehaviour
             attributeStrength++;
         }
     }
-
+    //Called when you press the vitality attribute button.
     public void SelectVIT()
     {
         if(skillpoint > 0)
@@ -89,7 +90,7 @@ public class Hero_Leveling : MonoBehaviour
         upgradepoint.SetText("Upgrade Points :" + skillpoint.ToString());
         displayattributeSTR.SetText(attributeStrength.ToString());
         displayattributeVIT.SetText(attributeVitality.ToString());
-
+    
     }
 
 }
